@@ -5,6 +5,6 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
         <property name="java-output-path" value="/java-nows-blog/target/classes"/>
-        <property name="context-root" value="java-spring-blog"/>
+        <property name="context-root" value="java-nows-blog"/>
     </wb-module>
 </project-modules>
