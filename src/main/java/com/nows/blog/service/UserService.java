@@ -1,5 +1,6 @@
 package com.nows.blog.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.transaction.Transactional;
@@ -7,13 +8,16 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort.Direction;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.nows.blog.entity.Blog;
 import com.nows.blog.entity.Item;
+import com.nows.blog.entity.Role;
 import com.nows.blog.entity.User;
 import com.nows.blog.repository.BlogRepository;
 import com.nows.blog.repository.ItemRepository;
+import com.nows.blog.repository.RoleRepository;
 import com.nows.blog.repository.UserRepository;
 
 @Service
@@ -29,6 +33,9 @@ public class UserService {
 	@Autowired
 	private ItemRepository itemRepository;
 	
+	@Autowired
+	private RoleRepository roleRepository;
+	
 	public List<User> findAll() {
 		return userRepository.findAll();
 	}
@@ -38,11 +45,19 @@ public class UserService {
 	}
 	
 	public void save(User user) {
+		user.setEnabled(true);
+		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+		user.setPassword(encoder.encode(user.getPassword()));
+		
+		List<Role> roles = new ArrayList<Role>();
+		roles.add(roleRepository.findByName("ROLE_USER"));
+		user.setRoles(roles);
+		
 		userRepository.save(user);
 	}
 
 	@Transactional
-	public User findOneWhithBlogs(int id) {
+	public User findOneWithBlogs(int id) {
 		User user = findOne(id);
 		List<Blog> blogs = blogRepository.findByUser(user);
 		for (Blog blog : blogs) {
@@ -51,6 +66,15 @@ public class UserService {
 		}
 		user.setBlogs(blogs);
 		return user;
+	}
+
+	public User findOneWithBlogs(String name) {
+		User user = userRepository.findByName(name);
+		return findOneWithBlogs(user.getId());
+	}
+	
+	public User findOne(String username) {
+		return userRepository.findByName(username);
 	}
 
 }

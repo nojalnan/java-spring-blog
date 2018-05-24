@@ -38,5 +38,6 @@
 	</bean>
 	
 	<jpa:repositories base-package="com.nows.blog.repository" />
-
+	
+	<import resource="security.xml" />
 </beans>

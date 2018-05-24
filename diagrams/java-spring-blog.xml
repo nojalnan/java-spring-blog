@@ -3,8 +3,8 @@
 		<entity-name>com.nows.blog.entity.Item</entity-name>
 		<entity-width>120</entity-width>
 		<entity-height>206</entity-height>
-		<entity-X-Coordinate>680</entity-X-Coordinate>
-		<entity-Y-Coordinate>141</entity-Y-Coordinate>
+		<entity-X-Coordinate>720</entity-X-Coordinate>
+		<entity-Y-Coordinate>38</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>
@@ -14,8 +14,8 @@
 		<entity-name>com.nows.blog.entity.Blog</entity-name>
 		<entity-width>120</entity-width>
 		<entity-height>186</entity-height>
-		<entity-X-Coordinate>470</entity-X-Coordinate>
-		<entity-Y-Coordinate>41</entity-Y-Coordinate>
+		<entity-X-Coordinate>496</entity-X-Coordinate>
+		<entity-Y-Coordinate>48</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>
@@ -25,8 +25,8 @@
 		<entity-name>com.nows.blog.entity.Role</entity-name>
 		<entity-width>120</entity-width>
 		<entity-height>146</entity-height>
-		<entity-X-Coordinate>40</entity-X-Coordinate>
-		<entity-Y-Coordinate>320</entity-Y-Coordinate>
+		<entity-X-Coordinate>30</entity-X-Coordinate>
+		<entity-Y-Coordinate>68</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>
@@ -35,9 +35,9 @@
 	<entity>
 		<entity-name>com.nows.blog.entity.User</entity-name>
 		<entity-width>120</entity-width>
-		<entity-height>206</entity-height>
-		<entity-X-Coordinate>240</entity-X-Coordinate>
-		<entity-Y-Coordinate>40</entity-Y-Coordinate>
+		<entity-height>226</entity-height>
+		<entity-X-Coordinate>260</entity-X-Coordinate>
+		<entity-Y-Coordinate>28</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>
