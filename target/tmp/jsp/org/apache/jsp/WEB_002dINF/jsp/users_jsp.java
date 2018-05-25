@@ -17,6 +17,7 @@ public final class users_jsp extends org.apache.jasper.runtime.HttpJspBase
   }
 
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_forEach_var_items;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_out_value_nobody;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_spring_url_value_nobody;
 
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
@@ -27,11 +28,13 @@ public final class users_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   public void _jspInit() {
     _jspx_tagPool_c_forEach_var_items = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_c_out_value_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_spring_url_value_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
   }
 
   public void _jspDestroy() {
     _jspx_tagPool_c_forEach_var_items.release();
+    _jspx_tagPool_c_out_value_nobody.release();
     _jspx_tagPool_spring_url_value_nobody.release();
   }
 
@@ -67,18 +70,50 @@ public final class users_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("\r\n");
       out.write("\r\n");
+      out.write("<script type=\"text/javascript\">\r\n");
+      out.write("$(document).ready(function() {\r\n");
+      out.write("\t$('nav-tabs a:first').tab('show'); // Select first tab\r\n");
+      out.write("\t$(\".triggerRemove\").click(function(e) {\r\n");
+      out.write("\t\te.preventDefault();\r\n");
+      out.write("\t\t$(\"#modalRemove .removeBtn\").attr(\"href\", $(this).attr(\"href\"));\r\n");
+      out.write("\t\t$(\"#modalRemove\").modal();\r\n");
+      out.write("\t});\r\n");
+      out.write("});\r\n");
+      out.write("</script>\r\n");
+      out.write("\r\n");
       out.write("<table class=\"table table-bordered table-hover table-striped\">\r\n");
       out.write("\t<thead>\r\n");
       out.write("\t\t<tr>\r\n");
       out.write("\t\t\t<th>user name</th>\r\n");
+      out.write("\t\t\t<th>operations</th>\r\n");
       out.write("\t\t</tr>\r\n");
+      out.write("\t</thead>\r\n");
       out.write("\t\t<tbody>\r\n");
       out.write("\t\t\t");
       if (_jspx_meth_c_forEach_0(_jspx_page_context))
         return;
       out.write("\r\n");
       out.write("\t\t</tbody>\r\n");
-      out.write("</table>");
+      out.write("</table>\r\n");
+      out.write("\r\n");
+      out.write("<!-- Modal -->\r\n");
+      out.write("<div class=\"modal fade\" id=\"modalRemove\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\">\r\n");
+      out.write("  <div class=\"modal-dialog\" role=\"document\">\r\n");
+      out.write("    <div class=\"modal-content\">\r\n");
+      out.write("      <div class=\"modal-header\">\r\n");
+      out.write("        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>\r\n");
+      out.write("        <h4 class=\"modal-title\" id=\"myModalLabel\">Remove blog</h4>\r\n");
+      out.write("      </div>\r\n");
+      out.write("      <div class=\"modal-body\">\r\n");
+      out.write("        Really remove?\r\n");
+      out.write("      </div>\r\n");
+      out.write("      <div class=\"modal-footer\">\r\n");
+      out.write("        <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Cancel</button>\r\n");
+      out.write("        <a href=\"\" class=\"btn btn-danger removeBtn\">Remove</a>\r\n");
+      out.write("      </div>\r\n");
+      out.write("    </div>\r\n");
+      out.write("  </div>\r\n");
+      out.write("</div>");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;
@@ -115,8 +150,17 @@ public final class users_jsp extends org.apache.jasper.runtime.HttpJspBase
             return true;
           out.write("\">\r\n");
           out.write("\t\t\t\t\t\t\t");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${user.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          if (_jspx_meth_c_out_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
+            return true;
           out.write("\r\n");
+          out.write("\t\t\t\t\t\t</a>\r\n");
+          out.write("\t\t\t\t\t</td>\r\n");
+          out.write("\t\t\t\t\t<td>\r\n");
+          out.write("\t\t\t\t\t\t<a href=\"");
+          if (_jspx_meth_spring_url_1((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
+            return true;
+          out.write("\" class=\"btn btn-danger triggerRemove\">\r\n");
+          out.write("\t\t\t\t\t\t\tremove\r\n");
           out.write("\t\t\t\t\t\t</a>\r\n");
           out.write("\t\t\t\t\t</td>\r\n");
           out.write("\t\t\t\t</tr>\r\n");
@@ -162,6 +206,50 @@ public final class users_jsp extends org.apache.jasper.runtime.HttpJspBase
     } finally {
       _jspx_th_spring_url_0.doFinally();
       _jspx_tagPool_spring_url_value_nobody.reuse(_jspx_th_spring_url_0);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_c_out_0(javax.servlet.jsp.tagext.JspTag _jspx_th_c_forEach_0, PageContext _jspx_page_context, int[] _jspx_push_body_count_c_forEach_0)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:out
+    org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_out_0 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _jspx_tagPool_c_out_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
+    _jspx_th_c_out_0.setPageContext(_jspx_page_context);
+    _jspx_th_c_out_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_forEach_0);
+    _jspx_th_c_out_0.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${user.name}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    int _jspx_eval_c_out_0 = _jspx_th_c_out_0.doStartTag();
+    if (_jspx_th_c_out_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_out_value_nobody.reuse(_jspx_th_c_out_0);
+      return true;
+    }
+    _jspx_tagPool_c_out_value_nobody.reuse(_jspx_th_c_out_0);
+    return false;
+  }
+
+  private boolean _jspx_meth_spring_url_1(javax.servlet.jsp.tagext.JspTag _jspx_th_c_forEach_0, PageContext _jspx_page_context, int[] _jspx_push_body_count_c_forEach_0)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  spring:url
+    org.springframework.web.servlet.tags.UrlTag _jspx_th_spring_url_1 = (org.springframework.web.servlet.tags.UrlTag) _jspx_tagPool_spring_url_value_nobody.get(org.springframework.web.servlet.tags.UrlTag.class);
+    _jspx_th_spring_url_1.setPageContext(_jspx_page_context);
+    _jspx_th_spring_url_1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_forEach_0);
+    _jspx_th_spring_url_1.setValue((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("/users/remove/${user.id}.html", java.lang.String.class, (PageContext)_jspx_page_context, null));
+    int[] _jspx_push_body_count_spring_url_1 = new int[] { 0 };
+    try {
+      int _jspx_eval_spring_url_1 = _jspx_th_spring_url_1.doStartTag();
+      if (_jspx_th_spring_url_1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_spring_url_1[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_spring_url_1.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_spring_url_1.doFinally();
+      _jspx_tagPool_spring_url_value_nobody.reuse(_jspx_th_spring_url_1);
     }
     return false;
   }
