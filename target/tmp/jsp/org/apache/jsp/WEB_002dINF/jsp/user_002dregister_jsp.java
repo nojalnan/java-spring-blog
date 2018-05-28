@@ -21,6 +21,7 @@ public final class user_002dregister_jsp extends org.apache.jasper.runtime.HttpJ
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_if_test;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_form_form_cssClass_commandName;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_form_password_path_cssClass_nobody;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_spring_url_value_nobody;
 
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
 
@@ -34,6 +35,7 @@ public final class user_002dregister_jsp extends org.apache.jasper.runtime.HttpJ
     _jspx_tagPool_c_if_test = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_form_form_cssClass_commandName = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_form_password_path_cssClass_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_spring_url_value_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
   }
 
   public void _jspDestroy() {
@@ -42,6 +44,7 @@ public final class user_002dregister_jsp extends org.apache.jasper.runtime.HttpJ
     _jspx_tagPool_c_if_test.release();
     _jspx_tagPool_form_form_cssClass_commandName.release();
     _jspx_tagPool_form_password_path_cssClass_nobody.release();
+    _jspx_tagPool_spring_url_value_nobody.release();
   }
 
   public void _jspService(HttpServletRequest request, HttpServletResponse response)
@@ -81,21 +84,21 @@ public final class user_002dregister_jsp extends org.apache.jasper.runtime.HttpJ
       _jspx_th_form_form_0.setPageContext(_jspx_page_context);
       _jspx_th_form_form_0.setParent(null);
       _jspx_th_form_form_0.setCommandName("user");
-      _jspx_th_form_form_0.setCssClass("form-horizontal");
+      _jspx_th_form_form_0.setCssClass("form-horizontal registrationForm");
       int[] _jspx_push_body_count_form_form_0 = new int[] { 0 };
       try {
         int _jspx_eval_form_form_0 = _jspx_th_form_form_0.doStartTag();
         if (_jspx_eval_form_form_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
           do {
             out.write("\r\n");
-            out.write("\t\r\n");
+            out.write("\r\n");
             out.write("\t");
             if (_jspx_meth_c_if_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_form_form_0, _jspx_page_context, _jspx_push_body_count_form_form_0))
               return;
             out.write("\r\n");
-            out.write("\t\r\n");
+            out.write("\r\n");
             out.write("\t<div class=\"form-group\">\r\n");
-            out.write("\t\t<label for=\"name\" class=\"col-sm-2 contrl-label\">Name:</label>\r\n");
+            out.write("\t\t<label for=\"name\" class=\"col-sm-2 control-label\">Name:</label>\r\n");
             out.write("\t\t<div class=\"col-sm-10\">\r\n");
             out.write("\t\t\t");
             if (_jspx_meth_form_input_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_form_form_0, _jspx_page_context, _jspx_push_body_count_form_form_0))
@@ -125,7 +128,7 @@ public final class user_002dregister_jsp extends org.apache.jasper.runtime.HttpJ
             out.write("\t\t</div>\r\n");
             out.write("\t</div>\r\n");
             out.write("\t<div class=\"form-group\">\r\n");
-            out.write("\t\t<label for=\"email\" class=\"col-sm-2 contrl-label\">Email:</label>\r\n");
+            out.write("\t\t<label for=\"email\" class=\"col-sm-2 control-label\">Email:</label>\r\n");
             out.write("\t\t<div class=\"col-sm-10\">\r\n");
             out.write("\t\t\t");
             if (_jspx_meth_form_input_1((javax.servlet.jsp.tagext.JspTag) _jspx_th_form_form_0, _jspx_page_context, _jspx_push_body_count_form_form_0))
@@ -155,7 +158,7 @@ public final class user_002dregister_jsp extends org.apache.jasper.runtime.HttpJ
             out.write("\t\t</div>\r\n");
             out.write("\t</div>\r\n");
             out.write("\t<div class=\"form-group\">\r\n");
-            out.write("\t\t<label for=\"password\" class=\"col-sm-2 contrl-label\">Password:</label>\r\n");
+            out.write("\t\t<label for=\"password\" class=\"col-sm-2 control-label\">Password:</label>\r\n");
             out.write("\t\t<div class=\"col-sm-10\">\r\n");
             out.write("\t\t\t");
             if (_jspx_meth_form_password_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_form_form_0, _jspx_page_context, _jspx_push_body_count_form_form_0))
@@ -185,6 +188,12 @@ public final class user_002dregister_jsp extends org.apache.jasper.runtime.HttpJ
             out.write("\t\t</div>\r\n");
             out.write("\t</div>\r\n");
             out.write("\t<div class=\"form-group\">\r\n");
+            out.write("\t\t<label for=\"password\" class=\"col-sm-2 control-label\">Password again:</label>\r\n");
+            out.write("\t\t<div class=\"col-sm-10\">\r\n");
+            out.write("\t\t\t<input type=\"password\" name=\"password_again\" id=\"password_again\" class=\"form-control\" />\r\n");
+            out.write("\t\t</div>\r\n");
+            out.write("\t</div>\r\n");
+            out.write("\t<div class=\"form-group\">\r\n");
             out.write("\t\t<div class=\"col-sm-2\">\r\n");
             out.write("\t\t\t<input type=\"submit\" value=\"Save\" class=\"btn btn-lg btn-primary\" />\r\n");
             out.write("\t\t</div>\r\n");
@@ -205,6 +214,60 @@ public final class user_002dregister_jsp extends org.apache.jasper.runtime.HttpJ
         _jspx_th_form_form_0.doFinally();
         _jspx_tagPool_form_form_cssClass_commandName.reuse(_jspx_th_form_form_0);
       }
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("<script type=\"text/javascript\">\r\n");
+      out.write("$(document).ready(function() {\r\n");
+      out.write("\t\r\n");
+      out.write("\t$(\".registrationForm\").validate(\r\n");
+      out.write("\t\t{\r\n");
+      out.write("\t\t\trules: {\r\n");
+      out.write("\t\t\t\tname: {\r\n");
+      out.write("\t\t\t\t\trequired : true,\r\n");
+      out.write("\t\t\t\t\tminlength : 3,\r\n");
+      out.write("\t\t\t\t\tremote : {\r\n");
+      out.write("\t\t\t\t\t\turl: \"");
+      if (_jspx_meth_spring_url_0(_jspx_page_context))
+        return;
+      out.write("\",\r\n");
+      out.write("\t\t\t\t\t\ttype: \"get\",\r\n");
+      out.write("\t\t\t\t\t\tdata: {\r\n");
+      out.write("\t\t\t\t\t\t\tusername: function() {\r\n");
+      out.write("\t\t\t\t\t\t\t\treturn $(\"#name\").val();\r\n");
+      out.write("\t\t\t\t\t\t\t}\r\n");
+      out.write("\t\t\t\t\t\t}\r\n");
+      out.write("\t\t\t\t\t}\r\n");
+      out.write("\t\t\t\t},\r\n");
+      out.write("\t\t\t\temail: {\r\n");
+      out.write("\t\t\t\t\trequired : true,\r\n");
+      out.write("\t\t\t\t\temail: true\r\n");
+      out.write("\t\t\t\t},\r\n");
+      out.write("\t\t\t\tpassword: {\r\n");
+      out.write("\t\t\t\t\trequired : true,\r\n");
+      out.write("\t\t\t\t\tminlength : 5\r\n");
+      out.write("\t\t\t\t},\r\n");
+      out.write("\t\t\t\tpassword_again: {\r\n");
+      out.write("\t\t\t\t\trequired : true,\r\n");
+      out.write("\t\t\t\t\tminlength : 5,\r\n");
+      out.write("\t\t\t\t\tequalTo: \"#password\"\r\n");
+      out.write("\t\t\t\t}\r\n");
+      out.write("\t\t\t},\r\n");
+      out.write("\t\t\thighlight: function(element) {\r\n");
+      out.write("\t\t\t\t$(element).closest('.form-group').removeClass('has-success').addClass('has-error');\r\n");
+      out.write("\t\t\t},\r\n");
+      out.write("\t\t\tunhighlight: function(element) {\r\n");
+      out.write("\t\t\t\t$(element).closest('.form-group').removeClass('has-error').addClass('has-success');\r\n");
+      out.write("\t\t\t},\r\n");
+      out.write("\t\t\tmessages: {\r\n");
+      out.write("\t\t\t\tname: {\r\n");
+      out.write("\t\t\t\t\tremote: \"Such username already exists!\"\r\n");
+      out.write("\t\t\t\t}\r\n");
+      out.write("\t\t\t}\r\n");
+      out.write("\t\t}\r\n");
+      out.write("\t);\r\n");
+      out.write("});\r\n");
+      out.write("</script>");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;
@@ -231,7 +294,7 @@ public final class user_002dregister_jsp extends org.apache.jasper.runtime.HttpJ
     if (_jspx_eval_c_if_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
         out.write("\r\n");
-        out.write("\t\t<div class=\"alert alert-success\">Registration Successfull!</div>\r\n");
+        out.write("\t\t<div class=\"alert alert-success\">Registration successfull!</div>\r\n");
         out.write("\t");
         int evalDoAfterBody = _jspx_th_c_if_0.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -255,7 +318,7 @@ public final class user_002dregister_jsp extends org.apache.jasper.runtime.HttpJ
     _jspx_th_form_input_0.setPageContext(_jspx_page_context);
     _jspx_th_form_input_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_form_0);
     _jspx_th_form_input_0.setPath("name");
-    _jspx_th_form_input_0.setCssClass("form-contrl");
+    _jspx_th_form_input_0.setCssClass("form-control");
     int[] _jspx_push_body_count_form_input_0 = new int[] { 0 };
     try {
       int _jspx_eval_form_input_0 = _jspx_th_form_input_0.doStartTag();
@@ -282,7 +345,7 @@ public final class user_002dregister_jsp extends org.apache.jasper.runtime.HttpJ
     _jspx_th_form_input_1.setPageContext(_jspx_page_context);
     _jspx_th_form_input_1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_form_0);
     _jspx_th_form_input_1.setPath("email");
-    _jspx_th_form_input_1.setCssClass("form-contrl");
+    _jspx_th_form_input_1.setCssClass("form-control");
     int[] _jspx_push_body_count_form_input_1 = new int[] { 0 };
     try {
       int _jspx_eval_form_input_1 = _jspx_th_form_input_1.doStartTag();
@@ -309,7 +372,7 @@ public final class user_002dregister_jsp extends org.apache.jasper.runtime.HttpJ
     _jspx_th_form_password_0.setPageContext(_jspx_page_context);
     _jspx_th_form_password_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_form_0);
     _jspx_th_form_password_0.setPath("password");
-    _jspx_th_form_password_0.setCssClass("form-contrl");
+    _jspx_th_form_password_0.setCssClass("form-control");
     int[] _jspx_push_body_count_form_password_0 = new int[] { 0 };
     try {
       int _jspx_eval_form_password_0 = _jspx_th_form_password_0.doStartTag();
@@ -323,6 +386,32 @@ public final class user_002dregister_jsp extends org.apache.jasper.runtime.HttpJ
     } finally {
       _jspx_th_form_password_0.doFinally();
       _jspx_tagPool_form_password_path_cssClass_nobody.reuse(_jspx_th_form_password_0);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_spring_url_0(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  spring:url
+    org.springframework.web.servlet.tags.UrlTag _jspx_th_spring_url_0 = (org.springframework.web.servlet.tags.UrlTag) _jspx_tagPool_spring_url_value_nobody.get(org.springframework.web.servlet.tags.UrlTag.class);
+    _jspx_th_spring_url_0.setPageContext(_jspx_page_context);
+    _jspx_th_spring_url_0.setParent(null);
+    _jspx_th_spring_url_0.setValue("/register/available.html");
+    int[] _jspx_push_body_count_spring_url_0 = new int[] { 0 };
+    try {
+      int _jspx_eval_spring_url_0 = _jspx_th_spring_url_0.doStartTag();
+      if (_jspx_th_spring_url_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_spring_url_0[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_spring_url_0.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_spring_url_0.doFinally();
+      _jspx_tagPool_spring_url_value_nobody.reuse(_jspx_th_spring_url_0);
     }
     return false;
   }

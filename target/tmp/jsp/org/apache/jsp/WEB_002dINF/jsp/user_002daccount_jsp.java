@@ -4,7 +4,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 
-public final class user_002ddetail_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class user_002daccount_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -89,7 +89,7 @@ public final class user_002ddetail_jsp extends org.apache.jasper.runtime.HttpJsp
       _jspx_th_form_form_0.setPageContext(_jspx_page_context);
       _jspx_th_form_form_0.setParent(null);
       _jspx_th_form_form_0.setCommandName("blog");
-      _jspx_th_form_form_0.setCssClass("form-horizontal");
+      _jspx_th_form_form_0.setCssClass("form-horizontal blogForm");
       int[] _jspx_push_body_count_form_form_0 = new int[] { 0 };
       try {
         int _jspx_eval_form_form_0 = _jspx_th_form_form_0.doStartTag();
@@ -201,6 +201,26 @@ public final class user_002ddetail_jsp extends org.apache.jasper.runtime.HttpJsp
       out.write("\t\t$(\"#modalRemove .removeBtn\").attr(\"href\", $(this).attr(\"href\"));\r\n");
       out.write("\t\t$(\"#modalRemove\").modal();\r\n");
       out.write("\t});\r\n");
+      out.write("\t$(\".blogForm\").validate(\r\n");
+      out.write("\t\t\t{\r\n");
+      out.write("\t\t\t\trules: {\r\n");
+      out.write("\t\t\t\t\tname: {\r\n");
+      out.write("\t\t\t\t\t\trequired : true,\r\n");
+      out.write("\t\t\t\t\t\tminlength : 1\r\n");
+      out.write("\t\t\t\t\t},\r\n");
+      out.write("\t\t\t\t\turl: {\r\n");
+      out.write("\t\t\t\t\t\trequired : true,\r\n");
+      out.write("\t\t\t\t\t\turl : true\r\n");
+      out.write("\t\t\t\t\t}\r\n");
+      out.write("\t\t\t\t},\r\n");
+      out.write("\t\t\t\thighlight: function(element) {\r\n");
+      out.write("\t\t\t\t\t$(element).closest('.form-group').removeClass('has-success').addClass('has-error');\r\n");
+      out.write("\t\t\t\t},\r\n");
+      out.write("\t\t\t\tunhighlight: function(element) {\r\n");
+      out.write("\t\t\t\t\t$(element).closest('.form-group').removeClass('has-error').addClass('has-success');\r\n");
+      out.write("\t\t\t\t}\r\n");
+      out.write("\t\t\t}\r\n");
+      out.write("\t\t);\r\n");
       out.write("});\n");
       out.write("</script>\r\n");
       out.write("\r\n");

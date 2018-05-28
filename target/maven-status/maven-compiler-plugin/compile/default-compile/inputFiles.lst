@@ -3,12 +3,16 @@ D:\nows\git\java-spring-blog\src\main\java\com\nows\blog\entity\Role.java
 D:\nows\git\java-spring-blog\src\main\java\com\nows\blog\repository\BlogRepository.java
 D:\nows\git\java-spring-blog\src\main\java\com\nows\blog\entity\Blog.java
 D:\nows\git\java-spring-blog\src\main\java\com\nows\blog\service\UserService.java
+D:\nows\git\java-spring-blog\src\main\java\com\nows\blog\annotation\UniqueUsername.java
 D:\nows\git\java-spring-blog\src\main\java\com\nows\blog\controller\IndexController.java
 D:\nows\git\java-spring-blog\src\main\java\com\nows\blog\entity\Item.java
 D:\nows\git\java-spring-blog\src\main\java\com\nows\blog\controller\LoginController.java
+D:\nows\git\java-spring-blog\src\main\java\com\nows\blog\controller\AdminController.java
+D:\nows\git\java-spring-blog\src\main\java\com\nows\blog\annotation\UniqueUsernameValidator.java
 D:\nows\git\java-spring-blog\src\main\java\com\nows\blog\entity\User.java
 D:\nows\git\java-spring-blog\src\main\java\com\nows\blog\repository\UserRepository.java
 D:\nows\git\java-spring-blog\src\main\java\com\nows\blog\repository\ItemRepository.java
 D:\nows\git\java-spring-blog\src\main\java\com\nows\blog\service\InitDbService.java
 D:\nows\git\java-spring-blog\src\main\java\com\nows\blog\repository\RoleRepository.java
+D:\nows\git\java-spring-blog\src\main\java\com\nows\blog\controller\RegisterController.java
 D:\nows\git\java-spring-blog\src\main\java\com\nows\blog\controller\UserController.java
